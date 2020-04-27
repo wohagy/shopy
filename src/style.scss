@@ -1,0 +1,36 @@
+.center {
+  display: flex;
+
+  align-items: center;
+}
+
+.time {
+  font-size: 12px;
+  color: #777;
+  padding-top: 2px;
+  max-width: 290px;
+}
+
+.header {
+  &_bd-l {
+    border-left: 1px solid gray;
+  }
+  &_bd-r {
+    border-right: 1px solid gray;
+  }
+  &_bd-t {
+    border-top: 1px solid gray;
+  }
+  &_bd-b {
+    border-bottom: 1px solid gray;
+  }
+}
+
+.layout {
+  position: absolute;
+  opacity: 0.3;
+}
+
+.aaa:hover .layout {
+  opacity: 1;
+}
