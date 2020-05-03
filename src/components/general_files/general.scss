@@ -1,0 +1,19 @@
+body * {
+  font-family: "Rubik", sans-serif;
+  font-weight: 300;
+}
+
+.container-base {
+  width: 100%;
+  padding-right: 0px;
+  padding-left: 0px;
+  margin-right: auto;
+  margin-left: auto;
+  overflow: visible;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

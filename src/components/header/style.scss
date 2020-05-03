@@ -1,8 +1,8 @@
-.center {
-  display: flex;
-
-  align-items: center;
-}
+$grayd: #e9e9e9;
+$gray-light: #f6f6f8;
+$small-text: #777;
+$pink: #d1466e;
+$grey: #333;
 
 .time {
   font-size: 12px;
@@ -11,26 +11,134 @@
   max-width: 290px;
 }
 
+.active {
+  > a {
+    color: $pink;
+  }
+}
+.container-all {
+  width: 100%;
+  overflow: hidden;
+  height: 1000px;
+}
+
 .header {
   &_bd-l {
-    border-left: 1px solid gray;
+    border-left: 1px solid $grayd;
   }
   &_bd-r {
-    border-right: 1px solid gray;
+    border-right: 1px solid $grayd;
   }
-  &_bd-t {
-    border-top: 1px solid gray;
+  &__line {
+    position: absolute;
+    border-top: 1px solid $grayd;
+    width: 200vw;
+    left: -20vw;
   }
-  &_bd-b {
-    border-bottom: 1px solid gray;
+  &__dropdown {
+    font-size: 0.9em !important;
+    color: $small-text !important;
+    &:hover .header__dropdown_hov {
+      color: $pink;
+    }
+    &_menu {
+      font-weight: 300 !important;
+      font-size: 0.95em;
+      transition: 0.3s;
+      &:hover {
+        color: $pink !important;
+      }
+    }
+  }
+}
+
+.small-menu {
+  &__text {
+    font-size: 0.87em;
+    color: $grey;
+    transition: 0.3s;
+    &:hover {
+      color: $pink;
+    }
+  }
+}
+
+.big-menu {
+  &__text {
+    font-weight: 500;
+    color: $grey;
+    transition: 0.3s;
+    &:hover {
+      color: $pink;
+    }
   }
 }
 
 .layout {
   position: absolute;
-  opacity: 0.3;
+  visibility: hidden;
+  opacity: 0;
+  width: 94%;
+  left: 5%;
+
+  box-shadow: 0 0 8px $small-text;
+  &_visib:hover .layout {
+    visibility: visible;
+    opacity: 1;
+    transition: 0.4s;
+  }
+  &_img-shadow {
+    box-shadow: 0 0 1px $small-text;
+    &:hover {
+      box-shadow: 0 0 10px 7px $grayd;
+    }
+  }
 }
 
-.aaa:hover .layout {
-  opacity: 1;
+.search {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  &__input-panel {
+    width: 95%;
+    background-color: $gray-light;
+    display: flex;
+    align-items: center;
+    &_form {
+      width: 85%;
+      font-size: 0.85em;
+      color: $small-text;
+      border: none;
+      background: $gray-light;
+      border-right: 2px solid $grayd;
+    }
+    &_btn {
+      font-size: 0.9em !important;
+      transition: 0.3s !important;
+      &:hover {
+        color: $pink !important;
+      }
+    }
+  }
+  &__button-close {
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    &_hov:hover {
+      transition: 0.3s;
+      color: $pink;
+      cursor: pointer;
+    }
+  }
+  &__button-open {
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      color: $pink;
+    }
+  }
 }
