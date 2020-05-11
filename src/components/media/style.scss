@@ -1,0 +1,34 @@
+@media (max-width: 1024px) {
+  #small-menu {
+    position: absolute;
+    top: 70%;
+    background-color: white;
+    box-shadow: 0 0 3px gray;
+    padding: 0.5em 7em 0.5em 1em;
+    z-index: 9;
+  }
+  #big-menu-btn {
+    position: absolute;
+    top: 100%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .container-base {
+    width: 975px;
+  }
+  .header {
+    &_bd-l {
+      border-left: 1px solid $grayd;
+    }
+    &_bd-r {
+      border-right: 1px solid $grayd;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .container-base {
+    width: 1230px;
+  }
+}

@@ -1,12 +1,11 @@
 header
-  .container-all
     .container-base 
       .row
-        .col-4.d-flex.align-items-center.justify-content-start
+        .col-1.col-lg-4.d-flex.align-items-center.justify-content-start.pb-lg-1.pt-lg-1.p-0.order-2.order-lg-1
           nav.navbar.navbar-expand-lg.p-0
-            button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+            button.navbar-toggler(type='button' data-toggle='collapse' data-target='#small-menu' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
               p ...
-            #navbarNav.collapse.navbar-collapse
+            #small-menu.collapse.navbar-collapse
               ul.navbar-nav
                 li.nav-item.active
                   a.small-menu__text.nav-link(href='#') Home
@@ -16,45 +15,45 @@ header
                   a.small-menu__text.nav-link(href='#') Blog
                 li.nav-item
                   a.small-menu__text.nav-link(href='#') Contacts
-        .col-8
+        .col-3.col-lg-8.order-1.order-lg-2
           .container-fluid.h-100
             .row.h-100
-              .col-6.center
+              .col-6.center.d-none.d-lg-flex
                 .container-fluid
                   .row
-                    .col-12.col-xl-5.p-0
+                    .col-12.col-xl-5.p-0.order-xl-1.text-right
                       p.m-0
                         span(class="iconify" data-icon="ic:round-call" data-inline="true")
                         | +300-9876-2345
-                    .col-12.col-xl-7.p-0
+                    .col-12.col-xl-7.p-0.text-right
                       p.m-0.time 7 Days a week from 9:00 am to 7:00 pm
-              .col-3.center.header_bd-l.p-0
-                .dropdown
-                  a.btn.dropdown-toggle.w-100.header__dropdown(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-                    span Language:                 
+              .col-6.col-lg-3.center.header_bd-l.p-0
+                .dropdown.w-100.h-100.center
+                  a.btn.dropdown-toggle.header__dropdown(type='button' data-toggle='dropdown' data-display="static" aria-haspopup='true' aria-expanded='false')
+                    span.d-none.d-lg-inline Language:                 
                     span.header__dropdown_hov English
-                  .dropdown-menu.dropdown-menu-right.shadow
+                  .dropdown-menu.dropdown-menu-left.dropdown-menu-lg-right.shadow
                     a.dropdown-item.header__dropdown_menu(type='button')
                       | Frech
                     a.dropdown-item.header__dropdown_menu(type='button')
                       | German
-              .col-3.center.header_bd-l.header_bd-r.p-0
-                .dropdown
-                  a.btn.dropdown-toggle.w-100.header__dropdown(type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
-                    span Currency: 
+              .col-6.col-lg-3.center.header_bd-l.header_bd-r.p-0
+                .dropdown.w-100.h-100.center
+                  a.btn.dropdown-toggle.header__dropdown(type='button' data-toggle='dropdown' data-display="static" aria-haspopup='true' aria-expanded='false')
+                    span.d-none.d-lg-inline Currency: 
                     span.header__dropdown_hov USD
-                  .dropdown-menu.dropdown-menu-right.shadow
+                  .dropdown-menu.dropdown-menu-left.dropdown-menu-lg-right.shadow
                     a.dropdown-item.header__dropdown_menu(type='button')
                       | ($) US Dollars
                     a.dropdown-item.header__dropdown_menu(type='button')
                       | (&euro;) Euro
                     a.dropdown-item.header__dropdown_menu(type='button')
                       | (&pound;) British Pounds
-        .col-12.mb-4
+        .col-12.mb-4.order-lg-3.d-none.d-lg-block
           .header__line
-        .col-8
-          a(class='d-block' href='https://shopy-default.myshopify.com/'): img(src="img/logo.png", alt="Logo")
-        .col-4.d-flex.align-items-center
+        .col-12.col-lg-8.order-4.order-lg-4.d-flex.justify-content-center.d-lg-block
+          a(class='d-block' href='https://shopy-default.myshopify.com/'): img(src="img/header/img/logo.png", alt="Logo")
+        .col-2.offset-6.col-lg-4.offset-lg-0.d-flex.align-items-center.order-3.order-lg-5
           .container-fluid
             .row
               .col-6.center.justify-content-end.p-0
@@ -62,72 +61,74 @@ header
                   span(class="iconify" data-icon="bi:person-fill" data-inline="false" style="font-size: 1.3em; color:#d1466e;")
                   span.d-none.d-lg-inline.small-menu__text.pl-1 My Account
               .col-6.center.justify-content-end
-                a.pr-4.small-menu__text(href="#") 
+                span#cart-open.pr-xl-4.small-menu__text(href="#" style="cursor: pointer;") 
                   span(class="iconify" data-icon="mdi:cart" data-inline="false" style="font-size: 1.3em;") 
                   span.font-weight-normal.d-none.d-lg-inline.pl-1(style="font-size: 1.2em;") YOUR BAG
-        .col-12.mt-4
+        .col-12.mt-4.order-6
           .header__line
-        .col-12.d-flex.justify-content-start.mt-2.mb-2
+        .col-12.d-flex.justify-content-start.order-7.align-items-center.pt-2.pb-2
           nav.navbar.navbar-expand-lg.p-0.w-100
-            button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
-              p ...
-            #navbarNav.collapse.navbar-collapse
+            button.navbar-toggler(type='button' data-toggle='collapse' data-target='#big-menu-btn' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+              span.big-menu__text.big-menu_btn 
+                span.mr-2(class="iconify" data-icon="oi:menu")
+                |  MENU
+            #big-menu-btn.collapse.navbar-collapse
               ul.navbar-nav
-                li.nav-item.active.layout_visib.d-block
+                li#lay.nav-item.active.d-block
                   a.nav-link.big-menu__text(href='#') LAYOUT
-                  .layout       
+                  #lay__item.layout       
                     .row
                       .col-12
-                        h4.mb-4.mt-4.ml-3(style='font-weight: 500;') LAYOUT
+                        h4.mb-4.mt-5.ml-3(style='font-weight: 500;') LAYOUT
                         .container-fluid 
                           .row
                             .col-2.mb-3
                               a.center.flex-column.small-menu__text(href="#")
-                                img.layout_img-shadow.mb-3(src="img/layout/layout-1.jpg", alt="", width='100%')
+                                img.layout_img-shadow.mb-3(src="img/header/img/layout/layout-1.jpg", alt="", width='100%')
                                 p Home Page 1
                             .col-2.mb-3
                               a.center.flex-column.small-menu__text(href="#")
-                                img.layout_img-shadow.mb-3(src="img/layout/layout-2.jpg", alt="", width='100%')
+                                img.layout_img-shadow.mb-3(src="img/header/img/layout/layout-2.jpg", alt="", width='100%')
                                 p Home Page 2
                             .col-2.mb-3
                               a.center.flex-column.small-menu__text(href="#")
-                                img.layout_img-shadow.mb-3(src="img/layout/layout-3.jpg", alt="", width='100%')
+                                img.layout_img-shadow.mb-3(src="img/header/img/layout/layout-3.jpg", alt="", width='100%')
                                 p Home Page 3
                             .col-2.mb-3
                               a.center.flex-column.small-menu__text(href="#")
-                                img.layout_img-shadow.mb-3(src="img/layout/layout-4.jpg", alt="", width='100%')
+                                img.layout_img-shadow.mb-3(src="img/header/img/layout/layout-4.jpg", alt="", width='100%')
                                 p Home Page 4
                             .col-2.mb-3
                               a.center.flex-column.small-menu__text(href="#")
-                                img.layout_img-shadow.mb-3(src="img/layout/layout-5.jpg", alt="", width='100%')
+                                img.layout_img-shadow.mb-3(src="img/header/img/layout/layout-5.jpg", alt="", width='100%')
                                 p Home Page 5
                             .col-2.mb-3
                               a.center.flex-column.small-menu__text(href="#")
-                                img.layout_img-shadow.mb-3(src="img/layout/layout-6.jpg", alt="", width='100%')
+                                img.layout_img-shadow.mb-3(src="img/header/img/layout/layout-6.jpg", alt="", width='100%')
                                 p Home Page 6
                             .col-2.mb-3
                               a.center.flex-column.small-menu__text(href="#")
-                                img.layout_img-shadow.mb-3(src="img/layout/layout-7.jpg", alt="", width='100%')
+                                img.layout_img-shadow.mb-3(src="img/header/img/layout/layout-7.jpg", alt="", width='100%')
                                 p Home Page 7
                             .col-2.mb-3
                               a.center.flex-column.small-menu__text(href="#")
-                                img.layout_img-shadow.mb-3(src="img/layout/layout-8.jpg", alt="", width='100%')
+                                img.layout_img-shadow.mb-3(src="img/header/img/layout/layout-8.jpg", alt="", width='100%')
                                 p Home Page 8
                             .col-2.mb-3
                               a.center.flex-column.small-menu__text(href="#")
-                                img.layout_img-shadow.mb-3(src="img/layout/layout-9.jpg", alt="", width='100%')
+                                img.layout_img-shadow.mb-3(src="img/header/img/layout/layout-9.jpg", alt="", width='100%')
                                 p Home Page 9
                             .col-2.mb-3
                               a.center.flex-column.small-menu__text(href="#")
-                                img.layout_img-shadow.mb-3(src="img/layout/layout-10.jpg", alt="", width='100%')
+                                img.layout_img-shadow.mb-3(src="img/header/img/layout/layout-10.jpg", alt="", width='100%')
                                 p Home Page 10
                             .col-2.mb-3
                               a.center.flex-column.small-menu__text(href="#")
-                                img.layout_img-shadow.mb-3(src="img/layout/layout-11.jpg", alt="", width='100%')
+                                img.layout_img-shadow.mb-3(src="img/header/img/layout/layout-11.jpg", alt="", width='100%')
                                 p Home Page 11
                             .col-2.mb-3
                               a.center.flex-column.small-menu__text(href="#")
-                                img.layout_img-shadow.mb-3(src="img/layout/layout-12.jpg", alt="", width='100%')
+                                img.layout_img-shadow.mb-3(src="img/header/img/layout/layout-12.jpg", alt="", width='100%')
                                 p Home Page 12
                 li.nav-item
                   a.nav-link.big-menu__text(href='#') LISTING
@@ -139,20 +140,158 @@ header
                   a.nav-link.big-menu__text(href='#') GALLERY
                 li.nav-item
                   a.nav-link.big-menu__text(href='#') PAGES
-                li.nav-item
+                li#womens.nav-item
                   a.nav-link.big-menu__text(href='#') WOMEN'S
+                  #womens__item.layout
+                    .container-fluid.mt-4.mb-4
+                      .row.w-100
+                        .col
+                          p.clothes-menu__heading.big-menu__text TOPS, JACKETS
+                          ul.clothes-menu_list
+                            li.small-menu__text.dropdown-toggle.dropright.mb-1(data-toggle="dropdown" aria-haspopup="true" aria-expanded="false") Blouses (&and;) Shirts
+                              .dropdown-menu.dropdown-menu-right.shadow
+                                a.dropdown-item.header__dropdown_menu(type='button')
+                                  |  Link 1
+                                a.dropdown-item.header__dropdown_menu(type='button')
+                                  |  Link 2
+                                a.dropdown-item.header__dropdown_menu(type='button')
+                                  |  Link 3
+                                a.dropdown-item.header__dropdown_menu(type='button')
+                                  |  Link 4
+                                a.dropdown-item.header__dropdown_menu(type='button')
+                                  |  Link 5
+                                a.dropdown-item.header__dropdown_menu(type='button')
+                                  |  Link 6
+                            li.mb-1
+                              a(href="http://").small-menu__text Polo
+                            li.mb-1
+                              a(href="http://").small-menu__text Tops (&and;) T-shirts
+                            li.mb-1
+                              a(href="http://").small-menu__text Sleeveless Tops
+                            li.mb-1
+                              a(href="http://").small-menu__text Sweaters
+                            li.mb-1
+                              a(href="http://").small-menu__text Jackets
+                            li.mb-1
+                              a(href="http://").small-menu__text Outerwear
+                        .col 
+                          p.clothes-menu__heading.big-menu__text BOTTOMS
+                          ul.clothes-menu_list
+                            li.mb-1
+                              a(href="http://").small-menu__text Trousers
+                            li.mb-1
+                              a(href="http://").small-menu__text Jeans
+                            li.mb-1
+                              a(href="http://").small-menu__text Leggings
+                            li.mb-1
+                              a(href="http://").small-menu__text Jumpsuit (&and;) shorts
+                            li.mb-1
+                              a(href="http://").small-menu__text Skirts
+                            li.mb-1
+                              a(href="http://").small-menu__text Tights
+                        .col
+                          p.clothes-menu__heading.big-menu__text ACCESSORIES
+                          ul.clothes-menu_list
+                            li.mb-1
+                              a(href="http://").small-menu__text Jewellery
+                            li.mb-1
+                              a(href="http://").small-menu__text Hats
+                            li.mb-1
+                              a(href="http://").small-menu__text Scarves (&and;) snoods
+                            li.mb-1
+                              a(href="http://").small-menu__text Belts
+                            li.mb-1
+                              a(href="http://").small-menu__text Bags
+                            li.mb-1
+                              a(href="http://").small-menu__text Shoes
+                            li.mb-1
+                              a(href="http://").small-menu__text Sunglasses
+                        .col-5
+                          .d-flex
+                            span.clothes-menu__heading.big-menu__text.m-0.clothes-menu_brdr SPECIALS
+                            span.ml-5                               
+                              a(href='#womans-carousel' role='button' data-slide='prev')
+                                span(class="iconify" data-icon="ic:outline-arrow-back-ios")
+                            span.ml-3                                 
+                              a(href='#womans-carousel' role='button' data-slide='next')
+                                span(class="iconify" data-icon="ic:outline-arrow-forward-ios")
+                          #womans-carousel.carousel.slide.carousel-fade(data-ride='carousel' data-interval="false")
+                            .carousel-inner
+                              .carousel-item.active
+                                .container-fluid
+                                  .row
+                                    .col
+                                      a.center.flex-column.small-menu__text(href="#")
+                                        img.mb-2(src="img/header/img/layout/layout-7.jpg", alt="", width='100%')
+                                        p.text-center.m-0 Home Page 76
+                                        p.clothes-menu__price $1310.00
+                                    .col
+                                      a.center.flex-column.small-menu__text(href="#")
+                                        img.mb-2(src="img/header/img/layout/layout-6.jpg", alt="", width='100%')
+                                        p.text-center.m-0 Home Page 75
+                                        p.clothes-menu__price $340.00
+                              .carousel-item
+                                .container-fluid
+                                  .row
+                                    .col
+                                      a.center.flex-column.small-menu__text(href="#")
+                                        img.mb-2(src="img/header/img/layout/layout-5.jpg", alt="", width='100%')
+                                        p.text-center.m-0 Home Page 72
+                                        p.clothes-menu__price $10.00
+                                    .col
+                                      a.center.flex-column.small-menu__text(href="#")
+                                        img.mb-2(src="img/header/img/layout/layout-4.jpg", alt="", width='100%')
+                                        p.text-center.m-0 Home Page 71
+                                        p.clothes-menu__price $310.00
+                              .carousel-item  
+                                .container-fluid
+                                  .row
+                                    .col
+                                      a.center.flex-column.small-menu__text(href="#")
+                                        img.mb-2(src="img/header/img/layout/layout-7.jpg", alt="", width='100%')
+                                        p.text-center.m-0 Lorem ipsum dolor sit, amet consectetur a
+                                        p.clothes-menu__price $310.00
+                                    .col
+                                      a.center.flex-column.small-menu__text(href="#")
+                                        img.mb-2(src="img/header/img/layout/layout-7.jpg", alt="", width='100%')
+                                        p.text-center.m-0 Home Page 7
+                                        p.clothes-menu__price $310.00 
+                        .col-12
+                          .container-fluid
+                            .row
+                              .col-6
+                                img(src="img/header/img/womens/promo-img-44_560x.jpg", alt="" width="100%")
+                              .col-6
+                                img(src="img/header/img/womens/promo-img-45_560x.jpg", alt="" width="100%")                       
                 li.nav-item
                   a.nav-link.big-menu__text(href='#') MEN'S
-              .search__button-open(id="open_btn")
-                span.mr-4(class="iconify" data-icon="ant-design:search-outlined" data-inline="false" style="font-size: 1.4em;")
-              .search(id="search_panel")
-                .search__input-panel
-                  span(class="iconify ml-4 mr-3" data-icon="ant-design:search-outlined" data-inline="false" style="font-size: 1.4em;")
-                  input.search__input-panel_form(type="text" placeholder="Enter keyword")
-                  button.btn.ml-3.search__input-panel_btn Search
-                .search__button-close(id="close_btn")
-                  span.d-block.search__button-close_hov.mr-4(class="iconify" data-icon="fe:close" data-inline="false" style="font-size: 1.4em;")
-              
+          .search__button-open(id="open_btn")
+            span.mr-4(class="iconify" data-icon="ant-design:search-outlined" data-inline="false" style="font-size: 1.4em;")
+          .search(id="search_panel")
+            .search__input-panel
+              span.d-none.d-lg-block(class="iconify ml-4 mr-3" data-icon="ant-design:search-outlined" data-inline="false" style="font-size: 1.4em;")
+              input.search__input-panel_form(type="text" placeholder="Enter keyword")
+              button.btn.ml-3.search__input-panel_btn Search
+            .search__button-close(id="close_btn")
+              span.d-block.search__button-close_hov.mr-4(class="iconify" data-icon="fe:close" data-inline="false" style="font-size: 1.4em;")
+    #cart-block.cart
+      .container-base
+        .row
+          .col-12
+            span RECENTLY ADDED ITEM(S)
+            span.float-right(id="cart-close" class="iconify" data-icon="ic:outline-close" data-inline="false")
+          .col-12.center.pb-5.pt-5.mt-3.mb-3
+            p You have no items in your shopping cart.
+          .col-2
+            btn.btn.btn-danger 
+              span(class="iconify" data-icon="mdi:cart" data-inline="false" style="font-size: 1.3em;") 
+              span VIEW CART
+          .col-2.offset-6.center
+            p.m-0
+              span TOTAL:
+              span $0.00
+          .col-2.center.justify-content-end
+            btn.btn.btn-danger 
+              span(class="iconify" data-icon="ion:checkmark-done-circle" data-inline="false")
+              span CHECKOUT
 
-
-                  
