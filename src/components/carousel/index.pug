@@ -1,18 +1,30 @@
-#video-carousel.carousel.slide.video-slider.bg-info(data-ride='carousel' data-interval="0")
+#video-carousel.carousel.slide(data-ride='carousel' data-interval="0")
 	ol.carousel-indicators
-		li.active(data-target='#video-carousel' data-slide-to='0')
-		li(data-target='#video-carousel' data-slide-to='1')
-		li(data-target='#video-carousel' data-slide-to='2')
+		li.main-slider_indicators.active(data-target='#video-carousel' data-slide-to='0')
+		li.main-slider_indicators(data-target='#video-carousel' data-slide-to='1')
+		li.main-slider_indicators(data-target='#video-carousel' data-slide-to='2')
 	.carousel-inner
 		.carousel-item.active
-			img.d-block.w-100(src='/img/carousel/img/slide-1_x1024.jpg' alt='...' width="100%")
+			.main-slider
+				.overlay.center.flex-column
+					p.main-slider_small-text We are Pleased to Submit
+					p.main-slider_big-text New Stunning <br> Shopy
+					a.btn.btn-danger.main-slider__btn.main-slider__btn_pink(role="button" href="https://shopy-default.myshopify.com/") SHOP NOW
+				img.main-slider__back.d-block.w-100(src='/img/carousel/img/slide-1_x1024.jpg' alt='...' width="100%")
 		.carousel-item
-			img.d-block.w-100(src='/img/carousel/img/slide-2_x1024.jpg' alt='...')
+			.main-slider
+				.overlay
+					.row.mt-5
+						.col-5.offset-5.center.flex-column.align-items-end.mt-5
+							p.main-slider_small-text We are Pleased to Submit
+							p.text-right.main-slider_big-text New Stunning <br> Shopy
+							a.btn.btn-danger.main-slider__btn.main-slider__btn_pink(role="button" href="https://shopy-default.myshopify.com/") SHOP NOW
+				img.main-slider__back.d-block.w-100(src='/img/carousel/img/slide-2_x1024.jpg' alt='...' width="100%")
 		.carousel-item
-			img.d-block.w-100(src='...' alt='...')
-	a.carousel-control-prev(href='#video-carousel' role='button' data-slide='prev')
-		span.carousel-control-prev-icon(aria-hidden='true')
-		span.sr-only Previous
-	a.carousel-control-next(href='#video-carousel' role='button' data-slide='next')
-		span.carousel-control-next-icon(aria-hidden='true')
-		span.sr-only Next
+			.main-slider
+				.overlay.center.flex-column
+					p.main-slider_small-text There is no other theme with that amount of
+					p.main-slider_big-text Feature as You see <br> in
+						span(style="color:#d1466e;") Shopy
+					a.btn.btn-danger.main-slider__btn.main-slider__btn_dark(role="button" href="https://shopy-default.myshopify.com/") SHOP NOW
+				video.main-slider__back(src="https://cdn.shopify.com/s/files/1/2340/2391/files/video.mp4?9258096065016314311" loop="" muted="" autoplay=""  type="video/mp4")
