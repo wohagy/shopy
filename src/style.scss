@@ -131,7 +131,6 @@ body * {
 }
 
 @mixin big-menu-hover {
-  display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
 }
@@ -198,11 +197,11 @@ body * {
 }
 
 .layout {
+  transition: 0.3s;
   position: absolute;
   visibility: hidden;
   opacity: 0;
   background-color: white;
-  display: none;
   width: 94%;
   left: 3%;
   z-index: 10;

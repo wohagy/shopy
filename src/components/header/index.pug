@@ -277,13 +277,13 @@ header
     #cart-block.cart
       .container-base
         .row
-          .col-12
+          .col-12.mt-4
             span RECENTLY ADDED ITEM(S)
-            span.float-right(id="cart-close" class="iconify" data-icon="ic:outline-close" data-inline="false")
+            span.float-right.promo-box_cursor(id="cart-close" class="iconify" data-icon="ic:outline-close" data-inline="false")
           .col-12.center.pb-5.pt-5.mt-3.mb-3
             p You have no items in your shopping cart.
           .col-2
-            btn.btn.btn-danger 
+            a.btn.btn-danger.btn-mod.btn-mod_dark-pink(role="button" href="#")
               span(class="iconify" data-icon="mdi:cart" data-inline="false" style="font-size: 1.3em;") 
               span VIEW CART
           .col-2.offset-6.center
@@ -291,7 +291,7 @@ header
               span TOTAL:
               span $0.00
           .col-2.center.justify-content-end
-            btn.btn.btn-danger 
+            a.btn.btn-danger.btn-mod.btn-mod_dark-pink(role="button" href="#")
               span(class="iconify" data-icon="ion:checkmark-done-circle" data-inline="false")
               span CHECKOUT
 
