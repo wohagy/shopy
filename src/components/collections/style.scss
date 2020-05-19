@@ -1,0 +1,30 @@
+.collections {
+  padding: 0 2em !important;
+  &_heading {
+    color: $grey;
+    font-weight: 500;
+    font-size: 1.5em;
+    padding: 2em 0;
+  }
+  &_item {
+    color: $pink;
+    font-size: 1.25em;
+    font-weight: 500;
+    padding-top: 0.9em;
+    transition: 0.3s;
+  }
+  &__img {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  &__img_zoom {
+    transition: 0.3s;
+  }
+  &:hover &__img_zoom {
+    transform: scale(1.06, 1.06);
+  }
+  &:hover &_item {
+    color: $grey;
+  }
+}

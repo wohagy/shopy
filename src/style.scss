@@ -7,8 +7,6 @@ $grey: #333;
 .main-slider {
   overflow: hidden;
   position: relative;
-  height: 100%;
-  width: 100%;
   padding-top: 45%;
 
   &__back {
@@ -16,27 +14,6 @@ $grey: #333;
     top: 0;
     left: 0;
     width: 100%;
-  }
-
-  &__btn {
-    border: none !important;
-    border-radius: 0 !important;
-    font-size: 0.7em !important;
-    padding: 0.8rem 1.8rem !important;
-    &_pink {
-      background-color: $pink !important;
-      &:hover {
-        background-color: $grey !important;
-      }
-    }
-    &_dark {
-      background-color: $grey !important;
-      color: white !important;
-      &:hover {
-        background-color: white !important;
-        color: $grey !important;
-      }
-    }
   }
 
   &_big-text {
@@ -68,6 +45,37 @@ $grey: #333;
   z-index: 4;
 }
 
+.collections {
+  padding: 0 2em !important;
+  &_heading {
+    color: $grey;
+    font-weight: 500;
+    font-size: 1.5em;
+    padding: 2em 0;
+  }
+  &_item {
+    color: $pink;
+    font-size: 1.25em;
+    font-weight: 500;
+    padding-top: 0.9em;
+    transition: 0.3s;
+  }
+  &__img {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  &__img_zoom {
+    transition: 0.3s;
+  }
+  &:hover &__img_zoom {
+    transform: scale(1.06, 1.06);
+  }
+  &:hover &_item {
+    color: $grey;
+  }
+}
+
 body * {
   font-family: "Rubik", sans-serif;
   font-weight: 300;
@@ -85,7 +93,6 @@ body * {
 .container-all {
   width: 100%;
   overflow: hidden;
-  height: 5000px;
 }
 
 .center {
@@ -94,6 +101,34 @@ body * {
   justify-content: center;
 }
 
+.btn-mod {
+  transition: 0.3s !important;
+  border: none !important;
+  border-radius: 0 !important;
+  font-size: 0.7em !important;
+  padding: 0.8rem 1.8rem !important;
+  &_pink {
+    background-color: $pink !important;
+    &:hover {
+      background-color: $grey !important;
+    }
+  }
+  &_dark {
+    background-color: $grey !important;
+    color: white !important;
+    &:hover {
+      background-color: white !important;
+      color: $grey !important;
+    }
+  }
+  &_dark-pink {
+    background-color: $grey !important;
+    color: white !important;
+    &:hover {
+      background-color: $pink !important;
+    }
+  }
+}
 
 @mixin big-menu-hover {
   display: block !important;
@@ -273,6 +308,15 @@ body * {
   width: 100%;
 }
 
+@media (max-width: 720px) {
+  .main-slider_big-text {
+    font-size: 1.6em;
+  }
+  .main-slider_small-text {
+    font-size: 0.7em;
+  }
+}
+
 @media (max-width: 1024px) {
   #small-menu {
     position: absolute;
@@ -305,5 +349,37 @@ body * {
 @media (min-width: 1280px) {
   .container-base {
     width: 1230px;
+  }
+}
+
+.promo-box {
+  &__img {
+    transition: 0.3s;
+    overflow: hidden;
+    &_inpt {
+      transition: 0.3s;
+    }
+    &:hover &_hov {
+      transform: scale(1.06, 1.06);
+    }
+  }
+  &_cursor {
+    cursor: pointer;
+  }
+  &__text {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    font-size: 20px;
+    &_logo {
+      width: 3em;
+      margin-bottom: 0.5em;
+    }
+    &_heading {
+      color: white;
+      font-weight: 500;
+      font-size: 1.2em;
+    }
   }
 }

@@ -10,7 +10,11 @@ var browsersync = require("browser-sync").create();
 var index = "src/components/**/*.pug";
 var style = "src/components/**/style.scss";
 var script = "src/components/scripts/*.js";
-var pic = ["src/components/**/*.jp*g", "src/components/**/*.png"];
+var pic = [
+  "src/components/**/*.jp*g",
+  "src/components/**/*.png",
+  "src/components/**/*.webp",
+];
 
 gulp.task("pug", function () {
   return gulp

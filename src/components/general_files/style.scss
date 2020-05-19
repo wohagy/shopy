@@ -15,11 +15,39 @@ body * {
 .container-all {
   width: 100%;
   overflow: hidden;
-  height: 5000px;
 }
 
 .center {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.btn-mod {
+  transition: 0.3s !important;
+  border: none !important;
+  border-radius: 0 !important;
+  font-size: 0.7em !important;
+  padding: 0.8rem 1.8rem !important;
+  &_pink {
+    background-color: $pink !important;
+    &:hover {
+      background-color: $grey !important;
+    }
+  }
+  &_dark {
+    background-color: $grey !important;
+    color: white !important;
+    &:hover {
+      background-color: white !important;
+      color: $grey !important;
+    }
+  }
+  &_dark-pink {
+    background-color: $grey !important;
+    color: white !important;
+    &:hover {
+      background-color: $pink !important;
+    }
+  }
 }

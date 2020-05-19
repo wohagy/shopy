@@ -1,3 +1,12 @@
+@media (max-width: 720px) {
+  .main-slider_big-text {
+    font-size: 1.6em;
+  }
+  .main-slider_small-text {
+    font-size: 0.7em;
+  }
+}
+
 @media (max-width: 1024px) {
   #small-menu {
     position: absolute;

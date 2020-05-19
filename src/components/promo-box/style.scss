@@ -1,0 +1,31 @@
+.promo-box {
+  &__img {
+    transition: 0.3s;
+    overflow: hidden;
+    &_inpt {
+      transition: 0.3s;
+    }
+    &:hover &_hov {
+      transform: scale(1.06, 1.06);
+    }
+  }
+  &_cursor {
+    cursor: pointer;
+  }
+  &__text {
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    font-size: 20px;
+    &_logo {
+      width: 3em;
+      margin-bottom: 0.5em;
+    }
+    &_heading {
+      color: white;
+      font-weight: 500;
+      font-size: 1.2em;
+    }
+  }
+}

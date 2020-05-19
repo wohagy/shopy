@@ -1,8 +1,6 @@
 .main-slider {
   overflow: hidden;
   position: relative;
-  height: 100%;
-  width: 100%;
   padding-top: 45%;
 
   &__back {
@@ -10,27 +8,6 @@
     top: 0;
     left: 0;
     width: 100%;
-  }
-
-  &__btn {
-    border: none !important;
-    border-radius: 0 !important;
-    font-size: 0.7em !important;
-    padding: 0.8rem 1.8rem !important;
-    &_pink {
-      background-color: $pink !important;
-      &:hover {
-        background-color: $grey !important;
-      }
-    }
-    &_dark {
-      background-color: $grey !important;
-      color: white !important;
-      &:hover {
-        background-color: white !important;
-        color: $grey !important;
-      }
-    }
   }
 
   &_big-text {
