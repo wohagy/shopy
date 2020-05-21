@@ -10,6 +10,8 @@ body * {
   margin-right: auto;
   margin-left: auto;
   overflow: visible;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .container-all {
@@ -48,6 +50,14 @@ body * {
     color: white !important;
     &:hover {
       background-color: $pink !important;
+    }
+  }
+  &_white-pink {
+    background-color: white !important;
+    color: $grey !important;
+    &:hover {
+      background-color: $pink !important;
+      color: white !important;
     }
   }
 }

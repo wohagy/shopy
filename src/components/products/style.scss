@@ -1,0 +1,56 @@
+.products {
+  padding: 0 2em !important;
+  &_heading {
+    color: $grey;
+    font-weight: 500;
+    font-size: 1.5em;
+    padding: 2em 0 0 0;
+  }
+  &_bd {
+    border-top: 1px solid $grayd;
+    border-bottom: 1px solid $grayd;
+  }
+  &__btn {
+    position: absolute;
+    left: 0;
+    z-index: 100;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    width: 100%;
+    transition: 0.2s;
+    font-size: 1.4em;
+    font-weight: 500;
+  }
+  &_hover {
+    padding-top: 2em;
+    transition: 0.2s;
+    &:hover {
+      background-color: white;
+      box-shadow: 0 0 30px 10px $grayd;
+      .products__btn {
+        visibility: visible;
+        opacity: 1;
+      }
+      .btn-add {
+        background-color: white;
+        box-shadow: 0 30px 30px 10px $grayd;
+        padding-bottom: 2em;
+      }
+      .btn-view {
+        animation: puls 0.2s linear 0.2s normal both;
+      }
+    }
+  }
+}
+@keyframes puls {
+  from {
+    transform: scale(0, 0);
+  }
+  to {
+    transform: scale(1, 1);
+  }
+}
+.pro__img {
+  margin: 0 0 0.6em;
+}

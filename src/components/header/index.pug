@@ -15,7 +15,7 @@ header
                   a.small-menu__text.nav-link(href='#') Blog
                 li.nav-item
                   a.small-menu__text.nav-link(href='#') Contacts
-        .col-3.col-lg-8.order-1.order-lg-2
+        .col-4.col-sm-3.col-lg-8.order-1.order-lg-2
           .container-fluid.h-100
             .row.h-100
               .col-6.center.d-none.d-lg-flex
@@ -53,7 +53,7 @@ header
           .header__line
         .col-12.col-lg-8.order-4.order-lg-4.d-flex.justify-content-center.d-lg-block
           a(href='https://shopy-default.myshopify.com/'): img(src="img/header/img/logo.png", alt="Logo")
-        .col-2.offset-6.col-lg-4.offset-lg-0.d-flex.align-items-center.order-3.order-lg-5
+        .col-4.offset-3.col-sm-3.offset-sm-5.col-md-2.offset-md-6.col-lg-4.offset-lg-0.d-flex.align-items-center.order-3.order-lg-5
           .container-fluid
             .row
               .col-6.center.justify-content-end.p-0
@@ -66,16 +66,16 @@ header
                   span.font-weight-normal.d-none.d-lg-inline.pl-1(style="font-size: 1.2em;") YOUR BAG
         .col-12.mt-4.order-6
           .header__line
-        .col-12.d-flex.justify-content-start.order-7.align-items-center.pt-2.pb-2
+        .col-12.d-flex.justify-content-start.order-7.align-items-center
           nav.navbar.navbar-expand-lg.p-0.w-100
-            button.navbar-toggler(type='button' data-toggle='collapse' data-target='#big-menu-btn' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+            button.navbar-toggler.big-menu_pd(type='button' data-toggle='collapse' data-target='#big-menu-btn' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
               span.big-menu__text.big-menu_btn 
                 span.mr-2(class="iconify" data-icon="oi:menu")
                 |  MENU
             #big-menu-btn.collapse.navbar-collapse
               ul.navbar-nav
                 li#lay.nav-item.active.d-block
-                  a.nav-link.big-menu__text(href='#') LAYOUT
+                  a.nav-link.big-menu__text.big-menu_pd(href='#') LAYOUT
                   #lay__item.layout       
                     .row
                       .col-12
@@ -131,17 +131,17 @@ header
                                 img.layout_img-shadow.mb-3(src="img/header/img/layout/layout-12.jpg", alt="", width='100%')
                                 p Home Page 12
                 li.nav-item
-                  a.nav-link.big-menu__text(href='#') LISTING
+                  a.nav-link.big-menu__text.big-menu_pd(href='#') LISTING
                 li.nav-item
-                  a.nav-link.big-menu__text(href='#') PRODUCT
+                  a.nav-link.big-menu__text.big-menu_pd(href='#') PRODUCT
                 li.nav-item
-                  a.nav-link.big-menu__text(href='#') BLOG
+                  a.nav-link.big-menu__text.big-menu_pd(href='#') BLOG
                 li.nav-item
-                  a.nav-link.big-menu__text(href='#') GALLERY
+                  a.nav-link.big-menu__text.big-menu_pd(href='#') GALLERY
                 li.nav-item
-                  a.nav-link.big-menu__text(href='#') PAGES
+                  a.nav-link.big-menu__text.big-menu_pd(href='#') PAGES
                 li#womens.nav-item
-                  a.nav-link.big-menu__text(href='#') WOMEN'S
+                  a.nav-link.big-menu__text.big-menu_pd(href='#') WOMEN'S
                   #womens__item.layout
                     .container-fluid.mt-4.mb-4
                       .row.w-100
@@ -260,20 +260,22 @@ header
                           .container-fluid
                             .row
                               .col-6
-                                img(src="img/header/img/womens/promo-img-44_560x.jpg", alt="" width="100%")
+                                .scale
+                                  img.scale_hov(src="img/header/img/womens/promo-img-44_560x.jpg", alt="" width="100%")
                               .col-6
-                                img(src="img/header/img/womens/promo-img-45_560x.jpg", alt="" width="100%")                       
+                                .scale
+                                  img.scale_hov(src="img/header/img/womens/promo-img-45_560x.jpg", alt="" width="100%")                       
                 li.nav-item
-                  a.nav-link.big-menu__text(href='#') MEN'S
+                  a.nav-link.big-menu__text.big-menu_pd(href='#') MEN'S
           .search__button-open(id="open_btn")
             span.mr-4(class="iconify" data-icon="ant-design:search-outlined" data-inline="false" style="font-size: 1.4em;")
           .search(id="search_panel")
             .search__input-panel
               span.d-none.d-lg-block(class="iconify ml-4 mr-3" data-icon="ant-design:search-outlined" data-inline="false" style="font-size: 1.4em;")
-              input.search__input-panel_form(type="text" placeholder="Enter keyword")
+              input.search__input-panel_form.pl-5(type="text" placeholder="Enter keyword")
               button.btn.ml-3.search__input-panel_btn Search
             .search__button-close(id="close_btn")
-              span.d-block.search__button-close_hov.mr-4(class="iconify" data-icon="fe:close" data-inline="false" style="font-size: 1.4em;")
+              span.d-block.search__button-close_hov.mr-4(class="iconify" data-icon="fe:close" data-inline="true" style="font-size: 1.4em;")
     #cart-block.cart
       .container-base
         .row
