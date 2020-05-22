@@ -1,0 +1,19 @@
+.brand-slider {
+  margin: 50px 0 50px 0;
+  &__item {
+    text-align: center;
+    &_logo {
+      text-decoration: none;
+      text-align: center;
+    }
+    &_img {
+      transition: 0.4s;
+      filter: grayscale(100%);
+      opacity: 0.4;
+      &:hover {
+        filter: none;
+        opacity: 1;
+      }
+    }
+  }
+}

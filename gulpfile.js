@@ -8,7 +8,7 @@ var image = require("gulp-imagemin");
 var autoprefixer = require("gulp-autoprefixer");
 var browsersync = require("browser-sync").create();
 var index = "src/components/**/*.pug";
-var style = "src/components/**/style.scss";
+var style = "src/components/**/style*.scss";
 var script = "src/components/scripts/*.js";
 var pic = [
   "src/components/**/*.jp*g",
@@ -59,7 +59,7 @@ gulp.task("boots", function () {
 });
 
 gulp.task("script", function () {
-  return gulp.src(script).pipe(concat("script.js")).pipe(gulp.dest("build/"));
+  return gulp.src(script).pipe(gulp.dest("build/"));
 });
 
 gulp.task("img", function () {

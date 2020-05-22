@@ -1,0 +1,36 @@
+.table {
+  position: relative;
+  overflow: hidden;
+  &:hover .table_bg {
+    transform: scale(1.06, 1.06);
+  }
+  &:hover .btn-mod_pink {
+    background-color: $grey !important;
+  }
+  &_bg {
+    transition: 0.3s;
+  }
+  &__text {
+    top: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: $grey;
+    &_small {
+      font-size: 1.5em;
+    }
+    &_big {
+      font-weight: 500;
+      font-size: 4.5em;
+      line-height: 1em;
+      margin: 0 0 0.5em 0;
+    }
+    &_btn {
+      font-size: 1em !important;
+    }
+  }
+}

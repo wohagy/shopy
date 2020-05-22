@@ -1,3 +1,9 @@
+@media (max-width: 650px) {
+  .table_bg {
+    visibility: hidden;
+  }
+}
+
 @media (max-width: 720px) {
   .main-slider_big-text {
     font-size: 1.6em;
@@ -19,6 +25,9 @@
   #big-menu-btn {
     position: absolute;
     top: 100%;
+  }
+  .table {
+    font-size: 11px;
   }
 }
 
