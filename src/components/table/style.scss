@@ -1,6 +1,7 @@
 .table {
   position: relative;
   overflow: hidden;
+  margin: 0 !important;
   &:hover .table_bg {
     transform: scale(1.06, 1.06);
   }

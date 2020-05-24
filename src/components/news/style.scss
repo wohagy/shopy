@@ -1,0 +1,52 @@
+.news {
+  &_heading {
+    color: $grey;
+    font-weight: 500;
+    font-size: 1.5em;
+    padding: 2em 0 0 0;
+  }
+  &-slider {
+    &__img {
+      overflow: hidden;
+      position: relative;
+      display: block;
+      width: 100%;
+      margin: 0 0 1em 0;
+      &_hov {
+        transition: 0.3s;
+      }
+      &:hover &_hov {
+        transform: scale(1.06, 1.06);
+      }
+    }
+    &__item {
+      &_w {
+        width: 80%;
+      }
+      &_heading {
+        color: $grey;
+        font-weight: 500;
+        font-size: 1.5em;
+        transition: 0.3s;
+        &:hover {
+          color: $pink;
+        }
+      }
+      &_small {
+        color: $small-text;
+        font-size: 0.95em;
+        &-m {
+          margin: 0.5em 0 1em 0;
+        }
+        &-pink {
+          color: $pink;
+
+          &-bold {
+            font-weight: 500;
+            color: $pink;
+          }
+        }
+      }
+    }
+  }
+}

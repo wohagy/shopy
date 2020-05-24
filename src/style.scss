@@ -351,6 +351,33 @@ body * {
   }
 }
 
+.inst {
+  &__link {
+    display: block;
+    width: 20%;
+    position: relative;
+    &:hover .inst__eye {
+      opacity: 0.9;
+    }
+  }
+  &__eye {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $pink;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    top: 0;
+    &_icon {
+      font-size: 1.3em;
+      color: white;
+    }
+  }
+}
+
 @media (max-width: 650px) {
   .table_bg {
     visibility: hidden;
@@ -401,6 +428,59 @@ body * {
 @media (min-width: 1280px) {
   .container-base {
     width: 1230px;
+  }
+}
+
+.news {
+  &_heading {
+    color: $grey;
+    font-weight: 500;
+    font-size: 1.5em;
+    padding: 2em 0 0 0;
+  }
+  &-slider {
+    &__img {
+      overflow: hidden;
+      position: relative;
+      display: block;
+      width: 100%;
+      margin: 0 0 1em 0;
+      &_hov {
+        transition: 0.3s;
+      }
+      &:hover &_hov {
+        transform: scale(1.06, 1.06);
+      }
+    }
+    &__item {
+      &_w {
+        width: 80%;
+      }
+      &_heading {
+        color: $grey;
+        font-weight: 500;
+        font-size: 1.5em;
+        transition: 0.3s;
+        &:hover {
+          color: $pink;
+        }
+      }
+      &_small {
+        color: $small-text;
+        font-size: 0.95em;
+        &-m {
+          margin: 0.5em 0 1em 0;
+        }
+        &-pink {
+          color: $pink;
+
+          &-bold {
+            font-weight: 500;
+            color: $pink;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -798,6 +878,7 @@ $slick-opacity-not-active: 0.25 !default;
 .table {
   position: relative;
   overflow: hidden;
+  margin: 0 !important;
   &:hover .table_bg {
     transform: scale(1.06, 1.06);
   }

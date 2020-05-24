@@ -1,0 +1,26 @@
+.inst {
+  &__link {
+    display: block;
+    width: 20%;
+    position: relative;
+    &:hover .inst__eye {
+      opacity: 0.9;
+    }
+  }
+  &__eye {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $pink;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    top: 0;
+    &_icon {
+      font-size: 1.3em;
+      color: white;
+    }
+  }
+}

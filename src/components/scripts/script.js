@@ -46,3 +46,20 @@ $(".brand-slider").slick({
     },
   ],
 });
+
+$(".news-slider").slick({
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  infinite: true,
+  responsive: [
+    {
+      breakpoint: 790,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true,
+      },
+    },
+  ],
+});
