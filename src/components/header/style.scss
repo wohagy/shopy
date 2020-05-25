@@ -87,11 +87,6 @@
   }
 }
 
-#womens:hover #womens__item,
-#lay:hover #lay__item {
-  @include big-menu-hover();
-}
-
 .search {
   display: none;
   position: absolute;
@@ -186,5 +181,32 @@
   }
   &:hover &_hov {
     transform: scale(1.06, 1.06);
+  }
+}
+.btn-home {
+  background-color: $pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  z-index: 900;
+  cursor: pointer;
+  right: 0;
+  bottom: 10vh;
+  transition: 0.3s;
+  &_icon {
+    display: block;
+    transition: 0.3s;
+    position: relative;
+    color: white;
+    font-size: 40px;
+  }
+  &:hover {
+    background-color: $grey;
+  }
+  &:hover &_icon {
+    transform: translateY(-5px);
   }
 }

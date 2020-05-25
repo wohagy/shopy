@@ -19,7 +19,7 @@ header
           .container-fluid.h-100
             .row.h-100
               .col-6.center.d-none.d-lg-flex
-                .container-fluid
+                .container-fluid.pl-xl-0
                   .row
                     .col-12.col-xl-5.p-0.order-xl-1.text-right
                       p.m-0
@@ -68,12 +68,14 @@ header
           .header__line
         .col-12.d-flex.justify-content-start.order-7.align-items-center
           nav.navbar.navbar-expand-lg.p-0.w-100
-            button.navbar-toggler.big-menu_pd(type='button' data-toggle='collapse' data-target='#big-menu-btn' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+            button.navbar-toggler.big-menu_pd(aria-expanded='false' type='button' data-toggle='collapse' data-target='#big_menu_btn' aria-controls='navbarNav' aria-label='Toggle navigation')
               span.big-menu__text.big-menu_btn 
                 span.mr-2(class="iconify" data-icon="oi:menu")
                 |  MENU
-            #big-menu-btn.collapse.navbar-collapse
+            #big_menu_btn.collapse.navbar-collapse
               ul.navbar-nav
+                li#small_menu_close.nav-item.d-lg-none
+                  a.nav-link.big-menu__text.big-menu_pd(href='#') CLOSE MENU
                 li#lay.nav-item.active.d-block
                   a.nav-link.big-menu__text.big-menu_pd(href='#') LAYOUT
                   #lay__item.layout       
@@ -140,9 +142,9 @@ header
                   a.nav-link.big-menu__text.big-menu_pd(href='#') GALLERY
                 li.nav-item
                   a.nav-link.big-menu__text.big-menu_pd(href='#') PAGES
-                li#womens.nav-item
+                li#lay.nav-item
                   a.nav-link.big-menu__text.big-menu_pd(href='#') WOMEN'S
-                  #womens__item.layout
+                  #lay__item.layout
                     .container-fluid.mt-4.mb-4
                       .row.w-100
                         .col
@@ -296,4 +298,6 @@ header
             a.btn.btn-danger.btn-mod.btn-mod_dark-pink(role="button" href="#")
               span(class="iconify" data-icon="ion:checkmark-done-circle" data-inline="false")
               span CHECKOUT
-
+    a#btn_home_id.btn-home
+      .btn-home_icon
+        span(class="iconify" data-icon="ic:sharp-navigate-next" data-inline="true" data-rotate="270deg")

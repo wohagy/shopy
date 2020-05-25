@@ -13,7 +13,7 @@
   }
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1023px) {
   #small-menu {
     position: absolute;
     top: 100%;
@@ -22,16 +22,28 @@
     padding: 0.5em 7em 0.5em 1em;
     z-index: 9;
   }
-  #big-menu-btn {
-    position: absolute;
-    top: 100%;
+  #big_menu_btn {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    z-index: 800;
+    background-color: white;
+    width: 40vw;
+    height: 100vh;
+    padding: 2em 0 0 0;
+    box-shadow: 0 0 600px 1px black;
+    transition: 2s;
+  }
+  .big-menu_pd {
+    padding-left: 2em !important;
+    border-bottom: 1px solid $grayd;
   }
   .table {
     font-size: 11px;
   }
 }
 
-@media (min-width: 1025px) {
+@media (min-width: 1024px) {
   .container-base {
     width: 975px;
   }
@@ -42,6 +54,9 @@
     &_bd-r {
       border-right: 1px solid $grayd;
     }
+  }
+  #lay:hover #lay__item {
+    @include big-menu-hover();
   }
 }
 

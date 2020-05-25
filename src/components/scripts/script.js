@@ -63,3 +63,27 @@ $(".news-slider").slick({
     },
   ],
 });
+
+jQuery(document).ready(function () {
+  var btn = $("#btn_home_id");
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 300) {
+      btn.addClass("show");
+    } else {
+      btn.removeClass("show");
+    }
+  });
+  btn.on("click", function (e) {
+    e.preventDefault();
+    $("html, body").animate({ scrollTop: 0 }, "300");
+  });
+});
+
+jQuery(document).ready(function () {
+  var small_menu_close = $("#small_menu_close");
+  var big_menu_btn = $("#big_menu_btn");
+  small_menu_close.on("click", function (e) {
+    e.preventDefault();
+    big_menu_btn.removeClass("show");
+  });
+});

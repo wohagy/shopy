@@ -1,0 +1,45 @@
+.email {
+  background: $pink;
+  &_heading {
+    padding-top: 5px;
+    color: white;
+    font-weight: 500;
+    font-size: 1.5em;
+  }
+  &_small {
+    color: white;
+  }
+  &__input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    &_text {
+      padding: 0 0 0 0.7em;
+      background-color: white;
+      &-span {
+        opacity: 0.8;
+        font-size: 25px;
+        color: $small-text;
+      }
+      &-pan {
+        width: 23em;
+        height: 50px;
+        font-size: 0.85em;
+        color: $small-text;
+        border: none;
+        background: white;
+      }
+    }
+    &_btn {
+      background-color: $grey !important;
+      border-radius: 0 !important ;
+      color: white !important;
+      transition: 0.3s !important;
+      height: 100% !important;
+      &:hover {
+        color: $grey !important;
+        background-color: white !important;
+      }
+    }
+  }
+}
